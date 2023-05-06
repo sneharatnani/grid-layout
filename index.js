@@ -1,4 +1,4 @@
-let arr = [
+let imgArr = [
   {
     url: "https://plus.unsplash.com/premium_photo-1664202526602-08cbc96c4b3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60",
     orientation: "landscape",
@@ -37,12 +37,12 @@ let arr = [
 
 window.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".container");
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < imgArr.length; i++) {
     const imgContainer = document.createElement("div");
-    imgContainer.setAttribute("class", arr[i].orientation);
-    const myImg = document.createElement("img");
-    myImg.src = arr[i].url;
-    imgContainer.appendChild(myImg);
+    imgContainer.setAttribute("class", imgArr[i].orientation);
+    const gridImg = document.createElement("img");
+    gridImg.src = imgArr[i].url;
+    imgContainer.appendChild(gridImg);
     container.appendChild(imgContainer);
   }
 });
